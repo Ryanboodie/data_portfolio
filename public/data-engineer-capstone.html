@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer Capstone | Roneil Boodie</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo"> Roneil Boodie </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <h1 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem;">🧰 Data Engineer Capstone</h1>
+            
+            <!-- Content area - to be filled in manually -->
+             <h2> Overview </h2>
+             <p> The Term Project was a group assignment to design and implement an ETL pipeline and the underlying data warehouse
+                to accommodate a Big Data application. We formed teams of 5 and worked with one or more selected Datasets.
+                We defined a business use case around those datasets and engineered a data processing system that incorporated
+                atleast 3 technologies that was studied in class. <br /> <br />
+                
+                We thought Big for this project by thinking about data volume, data sources, velocity, and variety. The application we built is able 
+                to process data from multiple sources, handle large volumes of data, and process data in real-time. What we came up with was an application
+                that holds critical data that needs to be protected and processed in a secure environment. <br /> <br />
+                
+             </p>
+
+             <h2> Business Use Case </h2>
+             <p>
+            Our team came up with a application that can solve the emergency response crisis in New York City. When we did our research we found that response times to emergency situations are 
+            getting longer and longer. We thought that this crisis can be solved through medical professionals responding to both emergencies and non-emergencies on our platform called MedConnect. MedConnect 
+            is a platform that will give users the ability to order a medical professional to their location, like Uber but for medical situations, especially in non-emergencies. 
+            We thought that by doing this it caan reduce the wait time in the hospital's emergency centers thus freeing up space for actual emergencies. 
+            <br /> <br />
+
+            MedConnect would have the option to also consult with doctors via the platform, order prescriptions, and order medical supplies (future feature). It would be a central hub to help you in times of emergencies.
+            Think about this, not knowing how to resuscitate someone in real-time but MedConnect being there to help walk you through it with simulations and eventually a medical professional will be on live and on their way
+            to help in the situation. This can be a game changer for emergency situations where most of us are not trained professionals but we can be more prepared. 
+            <br /> <br />
+
+            MedConnect will know your health history and can automatically prescribe you the right medication in emergency situations so the medical professionals can be able to properly assist with needed medicines if they need to 
+            pick it up at a pharmacy. The approvals would already be built in with doctors orders for the scripts to be sent rapidly. Emergency responders would be able to have your health information already through the app so they 
+            know what to expect and can be prepared for the situation. MedConnect will be equipped with real-time data to help users know how long they may have in certain situations until the patient will start to be in a critical condition. As 
+            mentioned before with the resuscitation, time is everything when trying to resuscitate someone and seeing an estimate to how long it can be before the patient is in a critical condition can be proactive. 
+            
+            </p>
+            <h2> Demo </h2>
+            
+            <div class="demo-container" style="max-width: 1200px; margin: 0 auto; padding: 20px 0;">
+                <div class="iframe-wrapper" style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                    <iframe 
+                        src="MedConnect NYC v5.html" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        title="MedConnect NYC Demo"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="MedConnect NYC v5.html" target="_blank" class="btn" style="display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        Open in Full Screen
+                    </a>
+                </div>
+            </div>
+
+            <h2> Tech Stack </h2>
+
+    <div class="tech-stack">
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="https://spark.apache.org/images/spark-logo-trademark.png" alt="Apache Spark" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3>Apache Spark</h3>
+            <p>Fast, scalable data processing for batch and streaming. Supports Python, SQL, and Machine Learning.</p>
+        </div>
+    </div>
+
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="../assets/images/postgresql.png" alt="PostgreSQL" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3>PostgreSQL</h3>
+            <p>A secure relational database for healthcare data that can support JSON type format like medical records.</p>
+        </div>
+    </div>
+
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="../assets/images/MongoDB_Logo.svg.png" alt="MongoDB" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3>MongoDB</h3>
+            <p>NoSQL document base storage for patient data that requires flexible schema and rapid iteration.</p>
+        </div>
+    </div>
+
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="../assets/images/Logo-redis.svg.png" alt="Redis" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3>Redis</h3>
+            <p> In-memory cache for sessions and real-time management of data. Cuts query latency.</p>
+        </div>
+    </div>
+
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="../assets/images/Apache_kafka_wordtype.svg.png" alt="Apache Kafka" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3> Apache Kafka </h3>
+            <p> Real-time streaming for hospital, clinic, and IoT data. Built for high throughput. </p>
+        </div>
+    </div>
+
+    <div class="tech-item">
+        <div class="tech-logo">
+            <img src="../assets/images/Amazon-S3-Logo.svg.png" alt="AWS s3" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
+        </div>
+        <div class="tech-content">
+            <h3> AWS S3 </h3>
+            <p>  Durable cloud storage for data lakes. Low cost archives and backups for compliant healthcare data. </p>
+        </div>
+    </div>
+    <!-- Add more tech items following the same pattern -->
+</div>
+        <h2> Datasets </h2>
+
+        <p> We obtain several datasets from New York City OpenData that included attributes such as Hospitals, Pharmacies, Doctors, Specialities, and more. Below you can <span style="font-style: italic">view</span> one of our 
+            datasets that was used to build our ETL pipeline. This dataset would be used as a foundation to design our map functionality on the front-end of the application and storage on the backend to update
+            the system as new data gets added to our processing system (data streaming). We could store our map data in a structured relational database like PostgreSQL with the previous data and new unstructured mapping data in MongoDB.
+        </p>
+        <br /> 
+        <h3> MedConnect NYC Hospital Dataset </h3>
+            <div class="dataset-container" style="margin: 2rem 0;">
+                <div class="table-responsive" style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1.5rem;">
+                    <table id="hospitalsTable" class="display" style="width:100%">
+                    </table>
+                </div>
+            </div>
+            <h2> Analysis </h2>
+            <p> In the notebooks below we conducted preprocessing, data mining and aggregation to analyze the data. It was also used as a way to depict a scenario in which 
+                an analyst can extract data, one example being that they can add or remove variables from the dataset for a more detailed analysis. In the real world this is how 
+                a data analyst may use one of these datasets to mine the data.  
+
+            </p>
+             <div class="code-reports" style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
+                <h3 style="margin: 0;"><a href="./add_category_remove_nurse_from_hospitals.html">View Code Report (1/3)</a></h3>
+                <h3 style="margin: 0;"><a href="./add_new_data.html">View Code Report (2/3)</a></h3>
+                <h3 style="margin: 0;"><a href="./Retrieving_Data_API.html">View Code Report (3/3)</a></h3>
+            </div>
+            <h2> Summary </h2>
+            <p> In this capstone I was able to demonstrate my knowledge of data engineering by helping to create an ETL pipeline that can be used to extract, transform, and load data from different
+                data sources. What I learned most was working on a team can help propel building something more efficiently. When we all complete our own tasks it helps aid in the larger objective of building a 
+                system. Everyone play a role in building something as large as an ETL pipeline.
+                
+             </p>
+<script>
+$(document).ready(function() {
+    // Load and parse the CSV file
+    $.get("../assets/MedConnect.hospitals.csv", function(csvString) {
+        const results = Papa.parse(csvString, {
+            header: true,
+            skipEmptyLines: true
+        });
+        // Log the first row to see the actual column names
+        console.log("First row of data:", results.data[0]);
+        console.log("Column names:", Object.keys(results.data[0]));
+        // Get the column names from the first row of data
+        const columns = Object.keys(results.data[0]).map(key => {
+            // Create a human-readable title from the key
+            const title = key
+                .replace(/_/g, ' ')
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, str => str.toUpperCase())
+                .trim();
+            
+            return {
+                title: title,
+                data: key
+            };
+        });
+        // Initialize DataTable with the correct column definitions
+        const table = $('#hospitalsTable').DataTable({
+            data: results.data,
+            columns: columns,
+            responsive: true,
+            scrollX: true,  // Enable horizontal scrolling
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+            pageLength: 10,
+            order: [[0, 'asc']],
+            language: {
+                search: "Search hospitals:",
+                lengthMenu: "Show _MENU_ hospitals per page",
+                info: "Showing _START_ to _END_ of _TOTAL_ hospitals",
+                infoEmpty: "No hospitals found",
+                infoFiltered: "(filtered from _MAX_ total hospitals)"
+            }
+        });
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        console.error("Error loading CSV file:", textStatus, errorThrown);
+        console.log("Response text:", jqXHR.responseText);
+    });
+});
+</script>
+
+<style>
+
+/* Tech Stack */
+.tech-stack {
+    margin: 2rem 0;
+}
+
+.tech-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.tech-logo {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    min-width: 40px;
+}
+
+.tech-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tech-content {
+    flex: 1;
+}
+
+.tech-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #1e293b;
+}
+
+.tech-content p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tech-item {
+        flex-direction: column;
+    }
+    
+    .tech-logo {
+        margin-bottom: 0.75rem;
+    }
+}
+
+.demo-container {
+    margin: 30px auto 50px;
+    }
+.btn:hover {
+    background: #2563eb !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+@media (max-width: 768px) {
+    .demo-container {
+        padding: 0 15px;
+        }
+    }
+/* Dataset Table Container */
+.dataset-container {
+    max-width: 1200px;  /* Match the demo container width */
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+/* Table Wrapper */
+.table-responsive {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    overflow-x: auto;  /* Add horizontal scroll for small screens */
+}
+/* DataTable Styling */
+#hospitalsTable {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+/* Header Styling */
+.dataTables_wrapper .dataTables_scrollHead {
+    border-bottom: 2px solid #e2e8f0;
+}
+.dataTables_wrapper .dataTables_scrollHead th {
+    background: #f8fafc;
+    color: #334155;
+    font-weight: 600;
+    padding: 12px 18px;
+    text-align: left;
+}
+/* Body Styling */
+.dataTables_wrapper .dataTables_scrollBody {
+    border: none !important;
+}
+.dataTables_wrapper .dataTables_scrollBody td {
+    padding: 12px 18px;
+    border-top: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+/* Hover Effect */
+.dataTables_wrapper tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+/* Search and Length Controls */
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px;
+}
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-left: 10px;
+}
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 4px;
+}
+/* Buttons Styling */
+.dt-buttons {
+    margin-bottom: 15px;
+}
+.dt-button {
+    background: #3b82f6;
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+.dt-button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+/* Pagination Styling */
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+.dataTables_wrapper .paginate_button {
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.dataTables_wrapper .paginate_button.current {
+    background: #3b82f6;
+    color: white !important;
+    border: none;
+}
+.dataTables_wrapper .paginate_button:hover {
+    background: #2563eb;
+    color: white !important;
+}
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .dataset-container {
+        padding: 0 10px;
+    }
+    
+    .dataTables_wrapper .dataTables_scrollHead th,
+    .dataTables_wrapper .dataTables_scrollBody td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .dt-button {
+        padding: 5px 10px;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+}
+/* Make sure the table doesn't overflow its container */
+div.dt-buttons {
+    margin-bottom: 15px;
+}
+/* Style the DataTable's info text */
+.dataTables_info {
+    margin-top: 10px;
+    color: #64748b;
+}
+/* Style the pagination buttons */
+.dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #3b82f6 !important;
+    border: 1px solid #e2e8f0;
+}
+.dataTables_paginate .paginate_button.current {
+    background: #3b82f6;
+    color: white !important;
+    border-color: #3b82f6;
+}
+.dataTables_paginate .paginate_button:hover {
+    background: #2563eb;
+    color: white !important;
+    border-color: #2563eb;
+}
+</style>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Roneil Boodie. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

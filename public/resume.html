@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Roneil  Boodie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .resume-section {
+            margin-bottom: 3rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border-radius: 10px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+        }
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .job-title {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .company-name {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        .date-location {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        .achievement {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .achievement:before {
+            content: "▸";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .download-btn {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: var(--transition);
+            margin: 1rem;
+        }
+        .download-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">🧬 Roneil Boodie </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div class="resume-header">
+                <h1>Roneil Boodie</h1>
+                <h2>Aspiring Data Scientist | Student | Columbia University - Applied Analytics </h2>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1rem;">
+                    <a href="mailto:rb3904@columbia.edu" style="text-decoration: none; color: white ; display: flex; align-items: center; gap: 0.5rem;">
+                    📧   | 
+                    </a> 
+                    <a href="https://www.linkedin.com/in/roneil-boodie/" target="_blank" style="text-decoration: none;">
+                        <img src="../assets/images/linkedin logo.png" height="25px" width="auto" alt="LinkedIn">
+                    </a> |
+                    <a href="https://x.com/roneilboodie" target="_blank" style="text-decoration: none;">
+                        <img src="../assets/images/x_logo.png" height="25px" width="auto" alt="Twitter">
+                    </a> |
+                    <a href="https://github.com/Ryanboodie" target="_blank" style="text-decoration: none;">
+                        <img src="../assets/images/github logo.png" height="25px" width="auto" alt="GitHub">
+                    </a>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <a href="../assets/Roneil_Boodie_Student_Resume_v2-1.pdf" target="_blank" class="download-btn" download>📄 Download Resume (PDF)</a>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;"> Professional Summary</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                    Data-driven professional with a growing foundation in applied analytics, marketing strategy, creativity and user experience. 
+                    Focused on leveraging data to drive smarter decisions, optimize campaigns, and solve real-world problems. 
+                    Currently pursuing a Master of Science in Applied Analytics at Columbia University. Eager to apply academic learning to real-world challenges and transform 
+                    complex datasets into actionable insights.
+                </p>
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;"> Education</h2>
+                
+                <div class="education-item">
+                    <div class="job-title">Master of Science in Applied Analytics</div>
+                    <div class="company-name">Columbia University</div>
+                    <div class="date-location">Expected Graduation: December 2026 | Current Student</div>
+                    <div class="achievement">Relevant Coursework: Research Design,  Strategy and Analytics,  AI User Interfaces for Analytics </div>
+                    <div class="achievement">Focus Areas: Predictive Analytics, Data Visualization, Deep Learning, AI</div>
+                    <div class="achievement">Academic Projects: Predictive Analytics Challenge, Big Data Application </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">Bachelor's of Business Administration in Marketing Management</div>
+                    <div class="company-name"> Baruch College </div>
+                    <div class="date-location">Graduated: May 2023 | GPA: 3.5/4.0</div>
+                    <div class="achievement">Minor: Marketing Analytics</div>
+                    <div class="achievement">Honors: Summa cum Laude</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title"> Certifications</div>
+                    <div class="achievement">Google Certificate in Digital Marketing and E-commerce</div>
+                    <div class="achievement">General Assemby Certificate in User Experience Design</div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;">Experience</h2>
+                
+
+                <div class="experience-item">
+                    <div class="job-title">Paid Media Specialist</div>
+                    <div class="company-name">Eightbar Collective</div>
+                    <div class="date-location">08/2023 - 06/2025</div>
+                    <div class="achievement"> 
+                        Strategized, launched, and optimized multi-channel paid media campaigns, 
+                        driving a 15% improvement in campaign efficiency through precise audience targeting and budget management.
+                    </div>
+                    <div class="achievement"> 
+                        Developed, automated, and managed campaign performance dashboards in Tableau and Excel, 
+                        delivering actionable insights to internal stakeholders and external vendors to inform ongoing optimizations.
+                    </div>
+                    <div class="achievement"> Partnered cross-functionally with Social media, Display, Search, Programmatic, and 
+                        Custom Content teams to align creative strategies with paid media objectives and enhance campaign effectiveness.
+                    </div>
+                    <div class="achievement"> 
+                        Conducted in-depth audience segmentation based on demographics, interests, and behaviors to maximize campaign reach and reduce cost per acquisition by ~20%.
+                    </div>
+
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">UX Research Internship</div>
+                    <div class="company-name">IBM</div>
+                    <div class="date-location"> 05/2022 - 08/2022</div>
+                    <div class="achievement"> Conducted user research including interviews, usability tests, and 
+                        journey mapping to inform homepage redesigns and product improvements from Adobe Target 
+                    </div>
+                    <div class="achievement"> Presented research reports and user behavior analyses to cross-functional stakeholders, 
+                        influencing a 40% improvement in web visitor data collection strategies 
+                    </div>
+                    <div class="achievement"> Designed and launched surveys using UserZoom, increasing user feedback response rates by 35% through strategic audience targeting 
+                    </div>
+                    <div class="achievement"> Synthesized research findings into actionable insights, driving a 25% increase in user-centered decision-making across design and product teams 
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;">Relevant Projects</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Predictive Analytics Competition</div>
+                    <div class="date-location"> 10/2025 - 11/2025 </div>
+                    <div class="achievement"> Built Machine Learning models that predicted credit spend based on dataset from a hosted repository</div>
+                    <div class="achievement"> Supervised machine learning models were built using Python libraries </div>
+                    <div class="achievement"> Communicate modeling strategies and findings through well-documented code, clear visualizations, a concise written summary, and a presentation </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Data Engineering Capstone Project</div>
+                    <div class="date-location"> 11/2025 - 12/2025</div>
+                    <div class="achievement"> Engineered an ETL pipeline for a Big data application using at least 3 technologies we studied in class. </div>
+                    <div class="achievement"> Developed and deployed a Big Data processing system for an application involving a business idea </div>
+                    <div class="achievement"> Created data structures and methods for managing, processing, and storing the data gathered for our application. </div>
+                </div>
+
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;">Technical Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Programming</h4>
+                        <p>Python, HTML, CSS, JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Machine Learning</h4>
+                        <p> Pandas, NumPy, TensorFlow, Scikit-learn, Apache Spark</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Visualization</h4>
+                        <p>Tableau, Matplotlib, Seaborn, Looker Studio</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Databases</h4>
+                        <p>PostgreSQL, MySQL, MongoD, NEO4J </p>
+                    </div>
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;"> Platforms & Tools </h4>
+                        <p>Git, Docker, Powershell, Jupyter Notebook, PyCharm </p>
+                    </div>
+                    <div class="skill-item">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Analytics</h4>
+                        <p>Statistics, A/B Testing, Data Analysis, SQL, Feature Engineering</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem;">Leadership Experience</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Volunteering</h4>
+                        <div class="achievement"> University Life Events</div>
+                        <div class="achievement"> Food Bank of NYC </div>
+                        <div class="achievement"> Housing Works </div>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;"> Extracurriculars </h4>
+                        <div class="achievement"> Golfing </div>
+                        <div class="achievement"> Boxing </div>
+                        <div class="achievement"> Yoga </div>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;"> Clubs & Organizations </h4>
+                        <div class="achievement"> Technology in Business Association </div>
+                        <div class="achievement"> Black Student Guild </div>
+                        <div class="achievement"> Student Government Association </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Ready to Learn & Contribute!</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                    A Columbia University student actively seeking internship opportunities in Data Science, and relevant roles to apply my academic learning to real-world settings.
+                </p>
+                <a href="contact.html" style="background: var(--secondary-color); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; transition: var(--transition);">
+                    Let's Connect! 🫱🏿‍🫲🏼
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Roneil Boodie. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
