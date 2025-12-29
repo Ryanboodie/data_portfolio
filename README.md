@@ -1,0 +1,1 @@
+A data science portfolio to demonstrate my capabilities in the data science field. It will involve projects that are part engineering and analytics. I seek to display my skillset to the public with the variety of courses I am learning as a Graduate student.
